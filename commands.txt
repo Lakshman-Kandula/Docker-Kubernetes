@@ -1,0 +1,43 @@
+minikube start     -  to start the minikube
+
+
+minikube status (optional)   -  to check the status of the kubernetes components
+
+
+minikube docker-env     -  to access the docker environment 
+
+
+@FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i     -   execute this in cmd
+
+
+docker build -t recipes-demo .    -  building the image of recipes spring boot application
+
+
+kubectl create -f mysql-definition.yaml    - creating the deployment and service for mysql
+
+
+kubectl get deploy (optional)    -  to check the status of the deployment
+
+kubectl get svc (optional)    -  to check the status of the service
+
+kubectl get pods (optional)    -  to check the status of the pods
+
+kubectl logs pod_id (optional)    -  to check the logs of particular instance
+
+
+kubectl create -f recipes-definition.yaml     -  creating the deployment and service for recipes
+
+
+kubectl get deploy (optional)    -  to check the status of the deployment
+
+kubectl get svc (optional)    -  to check the status of the service
+
+kubectl get pods (optional)    -  to check the status of the pods
+
+kubectl logs pod_id (optional)    -  to check the logs of particular instance
+
+
+minikube service list     -  to see the services
+
+
+minikube service service_name --url     -  command will output the URL where our service is exposed
